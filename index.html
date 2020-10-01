@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-<header class="header">
+<header  id="header_1" class="header">
  <div class="header__wrapper container">
 
    <div class=" col l2 header__logo">
@@ -45,6 +45,37 @@
     </nav>
   
 </header>
+<header  id="header_2" class="header">
+  <div class="header__wrapper container">
+ 
+    <div class=" col l2 header__logo">
+      <img src="./images/logo.svg" alt="" class="principal__logo__img">
+      <div class="disparador">
+        <i class="fa fa-bars"></i>
+      </div>
+     </div>
+     <nav class=" col l10 header__nav">
+       
+       <ul class="nav__principal">
+         <li class="nav_enlace"><a href="#">Features</a>
+         </li>
+         <li class="nav_enlace"><a href="#">Pricing</a>
+         </li>
+         <li class="nav_enlace"><a href="#">Resources</a>
+         </li>
+       </ul>
+       <ul class="nav__register">
+         <li class="nav_enlace"><a href="#">Login</a>
+         </li>
+         <li class="nav_enlace"><a href="#" class="btn btn-green-light rounded">Sign Up</a>
+         </li>
+         
+       </ul>
+     </div>
+         
+     </nav>
+   
+ </header>
  <main>
    <section class="home-working">
     <article class="container">
@@ -65,15 +96,20 @@
    <section class="grey">
      <article class="container col">
        <form class="form-morado">
-         <div class="col m10">
+         <div class="col m8 l9">
            <input type="text" name="url" id="url" class="form-control"placeholder="Shorten a link here...">
 
          </div>
-         <div class="col m2">
+         <div class="col m4 l3">
 
            <input type="submit" value="Shorten It!" class="btn btn-green-light form-morado-btn">
          </div>
        </form>
+     </article>
+     <article class="grey-info">
+       <h2 class="grey-info-title">Advanced Statistics</h2>
+       <p class="grey-info-text">Track how your links are performing across the web with our 
+        advanced statistics dashboard.</p>
      </article>
    </section>
  </main>

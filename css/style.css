@@ -1,6 +1,7 @@
 :root {
     --main-bg-color: coral;
     --cyan-color:hsl(180, 66%, 49%);
+    --cyan-color-light:#9be3e2;
     --Dark-Violet: hsl(257, 27%, 26%);
     --Red: hsl(0, 87%, 67%);
     --Gray: hsl(0, 0%, 75%);
@@ -35,11 +36,13 @@ a{
 }
 
 /*Typography*/
-h1 {
+h1,h2,h3 {
    
     font-weight: 700;
     line-height: 1.2;
 }
+
+
 /*commons*/
 .container{
         display: flex;
@@ -48,7 +51,9 @@ h1 {
         margin: auto;
         width: 100%;
 }
-
+.active{
+    display: block !important;
+}
 .center{
     justify-content:center  !important ;
 }
@@ -58,7 +63,9 @@ h1 {
     padding: 15px 28px;
     appearance: none;
     border: none;
+    transition: 0.3s 0.3s all;
 }
+
 input{
     font-size: 18px;
 }
@@ -69,8 +76,18 @@ input{
 .btn-green-light{
     background: var(--cyan-color);
 }
+.btn-green-light:hover{
+    background: var(--cyan-color-light);
+}
 /*sections*/
 /*header*/
+#header_1{
+    position: fixed;
+    width: 100%;
+    top:-130px;
+    transition: 0.3s 0.3s all;
+    box-shadow: 0px 0px 14px 0px #0000008f;
+}
 .header {
     display: flex;
     align-items: center;
@@ -118,7 +135,8 @@ input{
     margin-top: 50px;
 }
 /*form*/
-form.form-morado {
+
+.form-morado {
     width: 100%;
     background-color: var(--Dark-Violet);
     padding: 50px ;
@@ -136,7 +154,7 @@ form.form-morado {
     margin: 10px;
     min-width: 100%;
     min-height: 40px;
-    padding: 20px;
+    padding: 15px;
    border-radius: 10px;
 }
 .form-morado-btn {
@@ -150,6 +168,19 @@ form.form-morado {
     width: 100%;
     display: block;
     min-height: 400px;
+}
+.grey-info {
+    padding-top: 70px;
+    max-width: 500px;
+    margin: auto;
+
+}
+.grey-info-title{
+    text-align: center;
+}
+.grey-info-text {
+    text-align: center;
+    margin-top: 20px;
 }
 /*media*/
 @media(max-width:767px){
@@ -203,6 +234,11 @@ form.form-morado {
         justify-content: space-between;
     }
       /*form*/
+      .form-morado{
+          display:block;
+          padding: 0;;
+      }
+
       .form-control {
        
         margin: 15px 0;
@@ -222,6 +258,10 @@ form.form-morado {
     h1 {
         font-size: 2.5rem;
     }
+    h2{
+        font-size: 2rem;
+    }
+    
     .m1{
         flex: 0 0 8.333333%;
   max-width: 8.333333%;
@@ -269,6 +309,12 @@ form.form-morado {
     .m12{
         flex: 0 0 100%;
         max-width: 100%;
+    }
+    .home-working {
+        background-size: 60%;
+    }
+    .grey-info{
+        padding-top: 120px;
     }
   
 }
@@ -330,6 +376,9 @@ form.form-morado {
     h1 {
         font-size: 3.5rem;
     }
+    h2{
+        font-size: 2.2rem;
+    }
     .xl1{
         flex: 0 0 8.333333%;
   max-width: 8.333333%;
@@ -377,6 +426,9 @@ form.form-morado {
     .xl12{
         flex: 0 0 100%;
         max-width: 100%;
+    }
+    .home-working {
+        background-size: auto;
     }
   
 }
